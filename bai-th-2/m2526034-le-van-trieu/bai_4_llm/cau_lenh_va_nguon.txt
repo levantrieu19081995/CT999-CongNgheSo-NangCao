@@ -1,0 +1,23 @@
+﻿CÔNG CỤ VÀ NGUỒN
+Công cụ thực tế: trợ lý OpenAI trong Codex, phiên trò chuyện hiện tại.
+Không có phiên chạy ChatGPT web, NotebookLM hay Perplexity được ghi nhận.
+Không có ảnh giao diện hoặc nhật ký sử dụng các dịch vụ đó.
+
+ĐẦU VÀO
+Toàn văn PDF Cotton_2024_Chatting_and_cheating.pdf (13 trang PDF, gồm 12 trang bài báo và 1 trang thông tin).
+Đối chiếu trực tiếp với PDF nguyên bản; vị trí trang in của từng thông tin được ghi trong trich_xuat_va_doi_chieu.txt.
+
+YÊU CẦU TÓM TẮT VÀ TRÍCH XUẤT
+Đọc toàn văn bài Chatting and cheating: Ensuring academic integrity in the era of ChatGPT của Cotton, Cotton và Shipway. Viết bản tóm tắt tiếng Việt đúng 200 từ, tính theo các đơn vị cách nhau bằng khoảng trắng. Trích xuất riêng vấn đề nghiên cứu, phương pháp, kết quả và hạn chế; ghi trang in trong bài để đối chiếu. Phân biệt nhận định của tác giả với nhận xét rút ra khi đọc. Không biến kết quả minh họa nhỏ thành kết luận áp dụng chung.
+
+KẾT QUẢ TÓM TẮT (200 ĐƠN VỊ CÁCH NHAU BẰNG KHOẢNG TRẮNG)
+Bài báo phân tích cơ hội và rủi ro khi sử dụng ChatGPT trong giáo dục đại học, tập trung vào tính trung thực trong đánh giá. Cách tiếp cận gồm thảo luận tài liệu, sử dụng nội dung do ChatGPT tạo và bổ sung ví dụ về mức độ quan tâm cùng khả năng phát hiện văn bản. Phần đầu bài được tạo bằng ChatGPT; sau đó, nhóm tác giả sắp xếp nội dung và thay các tài liệu tham khảo không có thật. Các ứng dụng được bàn đến gồm hỗ trợ học tập, phản hồi, hợp tác và xây dựng bài đánh giá. Đồng thời, bài viết nêu nguy cơ nộp bài không phản ánh năng lực thực tế, khó xác định người viết và chênh lệch cơ hội tiếp cận công cụ. Các đề xuất gồm hướng dẫn sử dụng, kiểm tra nguồn, theo dõi bản nháp, kết hợp nhiều cách đánh giá và tăng hoạt động trình bày, trao đổi. Phần minh họa phát hiện văn bản có phạm vi nhỏ, nên cần thận trọng khi khái quát. Kết luận nhấn mạnh sử dụng công cụ có trách nhiệm và kiểm tra lại nội dung.
+
+Nguồn nhà xuất bản: https://doi.org/10.1080/14703297.2023.2190148
+Nguồn tải toàn văn: https://marjon.repository.guildhe.ac.uk/id/eprint/17810/
+Liên kết tra cứu Google Scholar: https://scholar.google.com/scholar?q=%22Chatting+and+cheating%3A+Ensuring+academic+integrity+in+the+era+of+ChatGPT%22
+
+
+BẢN THAM KHẢO DO TRỢ LÝ SOẠN – CHƯA PHẢI BẢN NGƯỜI HỌC TỰ VIẾT
+
+Điểm đáng chú ý của bài báo là việc dùng ChatGPT để viết phần đầu, rồi tự phân tích những vấn đề phát sinh từ cách làm đó. Qua ví dụ này, có thể thấy một đoạn văn trôi chảy chưa chắc có nguồn tham khảo đúng hoặc thể hiện hiểu biết của người nộp bài. Nội dung tập trung vào việc sử dụng ChatGPT trong trường đại học, gồm hỗ trợ học tập và những khó khăn khi đánh giá bài làm. Thay vì chỉ chú ý đến việc phát hiện văn bản máy tạo, cần xem cả quá trình thực hiện, như bản nháp, trao đổi và trình bày trực tiếp. Các đề xuất về hướng dẫn sử dụng và kiểm tra tài liệu tham khảo có thể áp dụng khi làm báo cáo môn học. Tuy nhiên, phần minh họa nhận diện văn bản chỉ dùng một số bài luận và công cụ ở thời điểm nghiên cứu, nên chưa đủ để kết luận về mọi trường hợp. Sau khi đọc, điều cần giữ lại là dùng công cụ để hỗ trợ, đồng thời tự kiểm tra thông tin và chịu trách nhiệm với bài đã nộp.

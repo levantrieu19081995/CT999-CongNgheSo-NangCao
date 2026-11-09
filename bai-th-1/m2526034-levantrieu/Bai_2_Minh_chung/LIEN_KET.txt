@@ -1,0 +1,10 @@
+Bài 2 – Minh chứng thực hành công cụ
+
+Google Sheets:
+https://docs.google.com/spreadsheets/d/1iZsFlX72cEJgehvt1TWIR6ncL2cuYGR-ui6qQsUIpHo/edit#gid=220026
+
+Julius:
+https://julius.ai/chat?id=2a549e4a-eebe-4913-87e9-8a02b38a0e0a
+
+Dữ liệu gồm 1 phản hồi thử gửi qua Forms. Không dùng để suy rộng kết quả khảo sát.
+Ảnh Julius là ảnh chụp giao diện; chưa tải tệp biểu đồ/CSV từ Julius.

@@ -1,0 +1,82 @@
+% Bien dich bang XeLaTeX (Overleaf: Menu > Compiler > XeLaTeX)
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2.25cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage[vietnamese]{babel}
+\usepackage{microtype,enumitem,tabularx,array,xcolor,hyperref,fancyhdr,tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\hypersetup{colorlinks=true,urlcolor=blue!55!black}
+\definecolor{ctublue}{HTML}{07639B}
+\setlength{\parindent}{1cm}\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=1pt}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Bài thực hành 3 -- Công dân số nâng cao}\fancyhead[R]{\small Lê Văn Triệu}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0.35pt}
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+{\bfseries\large BỘ GIÁO DỤC VÀ ĐÀO TẠO}\\[3pt]
+{\bfseries\large TRƯỜNG ĐẠI HỌC CẦN THƠ}\\[2pt]
+{\large TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG}\\[10pt]
+{\color{ctublue}\rule{0.72\textwidth}{1.2pt}}\\[25pt]
+{\Huge\bfseries\color{ctublue} BÁO CÁO THỰC HÀNH 3}\\[10pt]
+{\Large Học phần: Công dân số nâng cao}\\[27pt]
+{\large\bfseries XÁC ĐỊNH VẤN ĐỀ NGHIÊN CỨU PHỨC TẠP\\[7pt] VÀ ĐỀ XUẤT GIẢI PHÁP SỐ}\\[20pt]
+\begin{minipage}{0.9\textwidth}\centering
+{\LARGE\bfseries DỰ ĐOÁN NGUY CƠ ĐỘT QUỴ TỪ DỮ LIỆU Y TẾ BẰNG HỌC MÁY}\\[8pt]
+{\large So sánh Decision Tree, k-NN và SVM}
+\end{minipage}\\[28pt]
+\begin{tikzpicture}[>=Latex, every node/.style={font=\small}]
+\node[draw=ctublue,rounded corners=5pt,fill=blue!5,minimum width=3cm,minimum height=1.2cm] (d) {Dữ liệu y tế};
+\node[draw=ctublue,rounded corners=5pt,fill=blue!5,minimum width=3cm,minimum height=1.2cm,right=0.65cm of d] (m) {Mô hình học máy};
+\node[draw=ctublue,rounded corners=5pt,fill=blue!5,minimum width=3cm,minimum height=1.2cm,right=0.65cm of m] (r) {Dự đoán nguy cơ};
+\draw[->,thick,ctublue] (d)--(m);\draw[->,thick,ctublue] (m)--(r);
+\end{tikzpicture}\\[30pt]
+\end{center}
+\noindent\begin{tabularx}{\textwidth}{@{}lX@{}}
+\textbf{Học viên thực hiện:} & Lê Văn Triệu\\
+\textbf{Mã số học viên:} & M2526034\\
+\textbf{Chuyên ngành:} & Hệ thống thông tin\\
+\end{tabularx}
+\vfill
+\begin{center}\textbf{CẦN THƠ -- 2026}\end{center}
+\end{titlepage}
+\setcounter{page}{1}
+\section*{1. Mô tả vấn đề và lý do phức tạp}
+Đột quỵ là vấn đề sức khỏe nghiêm trọng; nhận diện nguy cơ sớm từ dữ liệu lâm sàng có thể hỗ trợ sàng lọc. Bài toán nghiên cứu là dự đoán nguy cơ đột quỵ bằng ba thuật toán \textbf{Decision Tree, k-Nearest Neighbors (k-NN) và Support Vector Machine (SVM)}. Mục tiêu là đề xuất quy trình số từ dữ liệu đến mô hình, đánh giá và trực quan hóa; kết quả chỉ mang tính hỗ trợ nghiên cứu, \textbf{không thay thế chẩn đoán y khoa}.
+
+Tính phức tạp thể hiện ở bốn điểm: (i) dữ liệu gồm các đặc trưng nhân khẩu học và lâm sàng đa dạng; (ii) có giá trị thiếu và biến phân loại cần tiền xử lý; (iii) dữ liệu mất cân bằng lớp khiến Accuracy dễ gây hiểu lầm; (iv) cần phối hợp chuyên môn dữ liệu, kỹ thuật phần mềm và hiểu biết y tế. Nghiên cứu tham chiếu sử dụng bộ \textit{Stroke Prediction Dataset} (Kaggle) gồm \textbf{5.110 bản ghi, 12 thuộc tính}, có \textbf{249 ca mang nhãn đột quỵ (4,87\%)} và \textbf{201 giá trị BMI thiếu}. Đây là số liệu trích từ báo cáo tham chiếu, không phải thực nghiệm mới của Bài 3.
+
+\section*{2. Đề xuất giải pháp số}
+Thiết kế quy trình \textbf{thu thập dữ liệu $\rightarrow$ kiểm tra và tiền xử lý $\rightarrow$ huấn luyện/đánh giá nhiều mô hình $\rightarrow$ trực quan hóa $\rightarrow$ giao diện demo}. Dữ liệu thiếu được xử lý có kiểm soát; dữ liệu phân loại được mã hóa; dữ liệu huấn luyện/kiểm tra được tách phân tầng theo nhãn. Đánh giá bằng Precision, Recall, F1 và AUC, kết hợp kiểm định chéo để tránh chọn mô hình chỉ dựa trên một lần chia dữ liệu.
+
+Theo kết quả \textit{đã có trong nghiên cứu tham chiếu}, AUC trên một lần chia kiểm tra lần lượt là: Decision Tree \textbf{0,8305}, k-NN \textbf{0,7831} và SVM \textbf{0,8404}. SVM có AUC cao nhất trong ba phương pháp được khảo sát ở tài liệu tham chiếu. Khi chuyển sang dữ liệu thực tế, cần đánh giá lại hiệu năng và các nguy cơ sai lệch theo từng nhóm người dùng.
+
+\section*{3. Chiến lược lựa chọn công cụ}
+\renewcommand{\arraystretch}{1.14}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.2cm}|X|}
+\hline
+\textbf{Vai trò} & \textbf{Công cụ và lý do lựa chọn}\\\hline
+A -- Phân tích dữ liệu & \textbf{Python, Pandas, scikit-learn}: đọc/làm sạch dữ liệu, thử nghiệm ba thuật toán, tính các thước đo và kiểm định chéo; dễ tái lập bằng mã nguồn.\\\hline
+B -- Trực quan hóa & \textbf{Matplotlib/Seaborn; dashboard Next.js}: minh họa phân bố nhãn, ma trận nhầm lẫn, ROC/AUC và kết quả dự đoán; giao diện web hỗ trợ trình bày.\\\hline
+C -- Quản lý tài liệu, cộng tác & \textbf{Git/GitHub, Google Drive, Trello}: theo dõi phiên bản mã, lưu tài liệu và phân công các bước nghiên cứu.\\\hline
+D -- Xây dựng báo cáo & \textbf{LaTeX (XeLaTeX/Overleaf)}: định dạng bìa, tiêu đề, bảng và tài liệu có cấu trúc; xuất PDF nhất quán, thuận tiện hiệu chỉnh.\\\hline
+\end{tabularx}
+
+\section*{4. Lợi ích và hạn chế}
+\textbf{Lợi ích:} Tạo quy trình số có khả năng tái lập, so sánh nhiều mô hình một cách minh bạch, trực quan hóa giúp đọc hiểu kết quả và hỗ trợ bước sàng lọc/nghiên cứu. \textbf{Hạn chế:} Dữ liệu công khai không đại diện cho mọi quần thể; nhãn mất cân bằng có thể tạo nhiều cảnh báo giả; thông tin y tế nhạy cảm cần được bảo vệ; mô hình phải được đánh giá độc lập trước bất kỳ ứng dụng thực tế nào.
+
+\section*{5. Minh họa sử dụng LaTeX để soạn báo cáo}
+Với \textbf{Overleaf}, tạo \textit{Blank Project}, chép tệp \texttt{bao\_cao\_bai\_3.tex}, chọn \textbf{XeLaTeX} trong \textit{Compiler}, sau đó nhấn \textit{Recompile} và tải PDF. Một đoạn lệnh minh họa:
+\begin{center}
+\fbox{\begin{minipage}{0.9\textwidth}\ttfamily\small
+\textbackslash section\{Mô tả vấn đề\}\\
+\textbackslash textbf\{Vấn đề:\} Dự đoán nguy cơ đột quỵ.\\
+\textbackslash begin\{itemize\}\\
+\quad\textbackslash item Dữ liệu mất cân bằng.\\
+\quad\textbackslash item Cần đánh giá bằng Recall và AUC.\\
+\textbackslash end\{itemize\}
+\end{minipage}}
+\end{center}
+\textbf{Kết luận:} Bài 3 minh họa lựa chọn một bộ công cụ nhất quán từ phân tích dữ liệu đến biểu diễn kết quả và biên soạn báo cáo. Nội dung được tổng hợp từ nghiên cứu về dự đoán đột quỵ, nhằm đáp ứng yêu cầu \textit{đề xuất giải pháp số}, không tuyên bố triển khai nghiên cứu mới.
+\end{document}
