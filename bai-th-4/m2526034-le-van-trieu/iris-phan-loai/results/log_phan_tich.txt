@@ -1,0 +1,18 @@
+DỮ LIỆU VÀ CÁCH CHIA
+CSV gốc: 150 dòng; thiếu: 0; loại dòng trùng: 3
+Sau làm sạch: 147 dòng; train: 102; test: 45; random_state=42
+Số mẫu theo loài: {'Iris-setosa': 48, 'Iris-versicolor': 50, 'Iris-virginica': 49}
+
+KẾT QUẢ CHẠY
+        model  cv_f1_mean  cv_f1_std  test_accuracy  test_f1_macro  correct  test_n
+          kNN      0.9602     0.0428         0.9111         0.9095       41      45
+          SVM      0.9597     0.0667         0.9111         0.9107       41      45
+Decision Tree      0.9501     0.0628         0.9333         0.9327       42      45
+Random Forest      0.9501     0.0628         0.9111         0.9107       41      45
+
+MA TRẬN NHẦM LẪN SVM (hàng thực tế, cột dự đoán)
+[[15  0  0]
+ [ 0 14  1]
+ [ 0  3 12]]
+
+Đã lưu CSV, summary.json và 5 hình PNG/PDF vào results

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "iris_uci_goc.zip",
+    "url": "https://archive.ics.uci.edu/static/public/53/iris.zip",
+    "bytes": 3738,
+    "sha256": "d11fe30213d36434a0879aab7cb00ce3c812eb7ba2495874438abff7b7b762e9"
+  },
+  {
+    "file": "React_MIT_LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/react/react/main/LICENSE",
+    "bytes": 1088,
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  {
+    "file": "TensorFlow_Apache_LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/tensorflow/tensorflow/master/LICENSE",
+    "bytes": 13575,
+    "sha256": "71c6915d04265772a0339bed47276942c678b45cc01534210ebe6984fd1aec65"
+  },
+  {
+    "file": "GPL-3.0.txt",
+    "url": "https://www.gnu.org/licenses/gpl-3.0.txt",
+    "bytes": 35149,
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  },
+  {
+    "file": "Apache-2.0.txt",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  }
+]

@@ -1,0 +1,15 @@
+# Tep tam khi soan va kiem tra bai
+.work-bth*/
+.chart-data-*/
+~$*
+~WRL*.tmp
+*.inspect.ndjson
+
+# Thu vien va moi truong chay cuc bo
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example

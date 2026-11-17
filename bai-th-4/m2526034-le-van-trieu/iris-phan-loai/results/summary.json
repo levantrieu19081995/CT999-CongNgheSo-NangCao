@@ -1,0 +1,33 @@
+{
+  "raw_rows": 150,
+  "clean_rows": 147,
+  "duplicates_removed": 3,
+  "missing_cells": 0,
+  "train_rows": 102,
+  "test_rows": 45,
+  "seed": 42,
+  "test_ratio": 0.3,
+  "cv_folds": 5,
+  "class_counts": {
+    "Iris-setosa": 48,
+    "Iris-versicolor": 50,
+    "Iris-virginica": 49
+  },
+  "train_class_counts": {
+    "Iris-setosa": 33,
+    "Iris-versicolor": 35,
+    "Iris-virginica": 34
+  },
+  "test_class_counts": {
+    "Iris-setosa": 15,
+    "Iris-versicolor": 15,
+    "Iris-virginica": 15
+  },
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "pandas": "3.0.1",
+  "scikit_learn": "1.9.1",
+  "matplotlib": "3.11.2",
+  "data_file": "iris.csv",
+  "data_sha256": "9528fd2831a049f39ca5f2c02fcf94f5b3f414697c558011ca139416980fbb19"
+}

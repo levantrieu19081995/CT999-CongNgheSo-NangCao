@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Nếu sử dụng mã nguồn hoặc báo cáo này, vui lòng trích dẫn dự án và dữ liệu UCI Iris."
+type: software
+title: "Khảo sát mô hình phân loại hoa Iris"
+version: 1.0.0
+date-released: 2026-11-17
+authors:
+  - family-names: "Lê"
+    given-names: "Văn Triệu"
+    orcid: "https://orcid.org/0009-0002-3102-8391"
+repository-code: "https://github.com/levantrieu19081995/ct999-iris-phan-loai"
+license: MIT
+keywords:
+  - Iris
+  - classification
+  - CT999
+  - reproducible-analysis

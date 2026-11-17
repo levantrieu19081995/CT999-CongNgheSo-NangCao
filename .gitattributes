@@ -1,0 +1,9 @@
+# Giu nguyen du lieu va ma bam cua cac bai moi khi tai tren Windows/Linux.
+/bai-th-3/** -text
+/bai-th-4/** -text
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.zip binary
+*.png binary
+*.jpg binary
