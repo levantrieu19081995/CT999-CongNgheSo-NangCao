@@ -1,0 +1,6 @@
+# Preserve input data and hashes across Windows and Linux checkouts.
+* -text
+*.pdf binary
+*.png binary
+*.zip binary
+*.pptx binary

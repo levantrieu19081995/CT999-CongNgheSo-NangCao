@@ -1,0 +1,4 @@
+-r ../iris-phan-loai/requirements.txt
+gTTS==2.5.4
+imageio-ffmpeg==0.8.1
+Pillow==13.0.0

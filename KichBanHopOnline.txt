@@ -1,0 +1,156 @@
+ 
+ KỊCH BẢN 
+
+**1. Mở đầu và nêu vấn đề**
+
+**Triệu:** Hôm nay nhóm mình họp để rà lại đề tài hệ thống đặt vé máy bay phân tán sử dụng CockroachDB và Cassandra. Mục đích là thống nhất những phần cần hoàn thiện, chia công việc cho bốn người và chốt thời gian kiểm tra trước khi làm báo cáo.
+
+Vấn đề của đề tài là hệ thống đặt vé có nhiều thao tác liên quan với nhau, như chọn chuyến bay, chọn ghế, tạo đặt chỗ và ghi nhận thanh toán. Nếu nhiều người cùng đặt một ghế thì hệ thống phải xử lý để tránh xác nhận trùng. Ngoài ra, dữ liệu được lưu trên nhiều node nên nhóm cũng cần giải thích được dữ liệu nằm ở đâu và hệ thống hoạt động thế nào khi một node gặp sự cố.
+
+Hiện mình đang dùng hai hệ quản trị cơ sở dữ liệu. Vì vậy, bài làm cần thể hiện rõ mỗi hệ quản trị đảm nhận phần nào, dữ liệu liên hệ với nhau ra sao và có kết quả chạy để minh họa.
+
+**Như:** Mình thấy cần làm rõ ngay từ đầu lý do sử dụng hai cơ sở dữ liệu. Khi trình bày, người xem phải hiểu dữ liệu đặt vé được lưu ở đâu, dữ liệu sự kiện được lưu ở đâu, chứ nếu chỉ mở giao diện lên thao tác thì chưa thể hiện rõ phần cơ sở dữ liệu nâng cao.
+
+**Minh:** Đúng rồi. Phần phân tán cũng cần có tình huống cụ thể. Ví dụ hai yêu cầu cùng đặt một ghế, hoặc dữ liệu đặt vé đã lưu nhưng quá trình ghi sự kiện bị gián đoạn. Nhóm cần kiểm tra từng trường hợp rồi mới đưa kết quả vào báo cáo.
+
+**Trang:** Còn về báo cáo, mình nghĩ nên trình bày theo từng bước: đặt ra tình huống, thực hiện thao tác, ghi nhận kết quả và giải thích kết quả đó. Như vậy lúc xem lại sẽ dễ theo dõi hơn.
+
+---
+
+**2. Xác định số lượng công việc cần làm**
+
+**Triệu:** Mình chia phần còn lại thành **bảy công việc chính** để dễ theo dõi.
+
+Một là rà lại chức năng đặt vé và luồng xử lý từ lúc chọn chuyến bay đến khi có kết quả đặt chỗ.
+
+Hai là kiểm tra cấu trúc dữ liệu trên CockroachDB và Cassandra, xác định vai trò của từng bảng.
+
+Ba là kiểm tra phần giao diện phân tán, gồm số lượng bản ghi, danh sách dữ liệu và thông tin node.
+
+Bốn là chuẩn bị tình huống nhiều yêu cầu đặt cùng một ghế để kiểm tra xử lý đồng thời.
+
+Năm là chuẩn bị tình huống gián đoạn kết nối hoặc node gặp sự cố, trong phạm vi môi trường nhóm có thể thực hiện.
+
+Sáu là chạy thử, lưu kết quả và chụp ảnh minh chứng.
+
+Bảy là tổng hợp báo cáo, slide và chuẩn bị thứ tự trình diễn.
+
+Mọi người xem còn thiếu phần nào cần đưa vào không?
+
+**Như:** Mình bổ sung trong công việc thứ hai phần sơ đồ dữ liệu và sơ đồ các node. Có sơ đồ thì lúc giải thích cấu trúc lưu trữ sẽ dễ hơn.
+
+**Minh:** Phần chạy thử nên có bảng ghi rõ thao tác và kết quả mong đợi trước khi chạy. Nếu chỉ chạy đến đâu ghi đến đó thì dễ bỏ sót các trường hợp quan trọng.
+
+**Trang:** Phần minh chứng cũng cần đặt tên thống nhất. Mỗi ảnh nên có tên tình huống hoặc số thứ tự để khi đưa vào báo cáo không bị nhầm.
+
+**Triệu:** Vậy mình giữ bảy công việc, bổ sung sơ đồ vào phần dữ liệu, bảng tình huống vào phần kiểm thử và quy định tên ảnh trong phần minh chứng.
+
+---
+
+**3. Trao đổi về dữ liệu và vai trò của hai hệ quản trị**
+
+**Như:** Phần dữ liệu mình sẽ kiểm tra các bảng trên CockroachDB như đặt vé, thanh toán, ghế của chuyến bay và bảng phục vụ việc chuyển tiếp sự kiện. Mình sẽ ghi lại khóa chính, các trường quan trọng và quan hệ giữa các bảng.
+
+Với Cassandra, mình sẽ kiểm tra hai cách lưu sự kiện: tra cứu theo mã đặt vé và tra cứu theo ngày. Mình muốn trình bày rõ vì sao cùng một loại sự kiện lại có hai bảng phục vụ hai cách truy vấn.
+
+**Minh:** Phần đó cần liên hệ với thao tác trên giao diện. Ví dụ khi mở chi tiết một đặt vé thì hệ thống cần lấy lịch sử theo mã đặt vé. Còn khi xem sự kiện trong một ngày thì sử dụng bảng theo ngày.
+
+**Triệu:** Đúng. Mình cũng cần giải thích luồng chuyển sự kiện từ phần xử lý đặt vé sang Cassandra. Phải kiểm tra cách hệ thống xử lý khi việc chuyển sự kiện chưa hoàn thành, tránh ghi trong báo cáo rằng hai bên luôn có dữ liệu cùng một thời điểm.
+
+**Trang:** Như làm phần cấu trúc dữ liệu xong thì gửi mình sơ đồ và nội dung giải thích. Mình sẽ đưa vào báo cáo trước phần chạy thử để người đọc có cơ sở theo dõi.
+
+---
+
+**4. Trao đổi về giao diện phân tán**
+
+**Triệu:** Phần giao diện phân tán hiện có danh sách bản ghi và thông tin vị trí dữ liệu. Mình sẽ rà lại phần này để khi demo có thể chọn cơ sở dữ liệu, chọn bảng, xem thông tin node và mở chi tiết bản ghi.
+
+Một vấn đề là khi thêm vài nghìn dòng dữ liệu, giao diện vẫn phải dễ sử dụng. Mình sẽ kiểm tra phân trang, bộ lọc và cách hiển thị khi không tìm thấy dữ liệu.
+
+**Trang:** Khi trình diễn, mình nghĩ nên đi từ thông tin tổng quát xuống chi tiết. Đầu tiên cho xem số lượng bản ghi, sau đó chọn một bảng, tìm một mã đặt vé rồi mở chi tiết.
+
+**Như:** Phần số lượng cũng cần nói rõ đang đếm bảng nào. Nếu có bảng chưa lấy được số lượng thì phải thể hiện đúng trạng thái, tránh để người xem hiểu số không là bảng không có dữ liệu.
+
+**Minh:** Có một chỗ cần chú ý là thông tin replica. Việc giao diện hiển thị các node giữ bản sao là thông tin về vị trí lưu trữ. Muốn kết luận một bản ghi đã được đồng bộ đầy đủ thì phải có kiểm tra riêng.
+
+**Triệu:** Mình ghi lại điểm đó. Trong báo cáo sẽ phân biệt thông tin vị trí dữ liệu với kết quả kiểm tra hoạt động của hệ thống. Phần nào đã chạy kiểm tra thì có minh chứng tương ứng.
+
+---
+
+**5. Thống nhất các tình huống chạy thử**
+
+**Minh:** Mình đề xuất chia phần chạy thử thành bốn nhóm tình huống.
+
+Thứ nhất là luồng bình thường: chọn chuyến bay, chọn ghế, tạo đặt vé rồi kiểm tra dữ liệu và lịch sử sự kiện.
+
+Thứ hai là gửi nhiều yêu cầu cùng đặt một ghế. Mình sẽ ghi lại số yêu cầu gửi, số yêu cầu thành công, số yêu cầu bị từ chối và trạng thái cuối cùng của ghế.
+
+Thứ ba là gửi lại yêu cầu để kiểm tra hệ thống có phát sinh dữ liệu trùng hay không. Phần này cần xem cơ chế hiện có trước khi chọn cách chạy.
+
+Thứ tư là tình huống gián đoạn kết nối hoặc node gặp sự cố. Mình sẽ kiểm tra cấu hình thực tế, chọn tình huống phù hợp rồi thống nhất với mọi người trước khi thực hiện.
+
+**Như:** Khi chạy, mình sẽ hỗ trợ kiểm tra dữ liệu trước và sau thao tác. Ví dụ ban đầu ghế đang trống, sau khi đặt thành công thì trạng thái thay đổi thế nào và có bao nhiêu bản ghi đặt vé liên quan.
+
+**Trang:** Với mỗi tình huống, mọi người gửi mình đủ ba phần: cách thực hiện, kết quả thực tế và ảnh hoặc log. Nếu kết quả chưa đúng thì cũng ghi lại để sửa, chưa đưa vào phần kết luận.
+
+**Triệu:** Đồng ý. Mỗi tình huống cần có mã để dễ đối chiếu, ví dụ kiểm tra đặt vé bình thường là TH01, đặt trùng ghế là TH02. Ảnh và log lưu theo mã đó.
+
+**Minh:** Phần dữ liệu thử mình sẽ dùng dữ liệu mẫu. Trước khi chạy các tình huống có thay đổi trạng thái node, mình sẽ ghi lại cấu hình ban đầu và cách khôi phục để sau đó tiếp tục chạy được.
+
+---
+
+**6. Phân công cho bốn thành viên**
+
+**Triệu:** Mình chốt phân công như sau.
+
+Mình phụ trách rà luồng chức năng đặt vé và giao diện phân tán. Mình kiểm tra bộ lọc, phân trang, mở chi tiết dữ liệu và chuẩn bị các bước thao tác khi trình diễn. Nếu phát hiện lỗi thì mình sửa và chạy lại phần liên quan.
+
+**Như:** Mình phụ trách cấu trúc dữ liệu của CockroachDB và Cassandra. Mình sẽ bổ sung sơ đồ, giải thích vai trò các bảng, cách truy vấn và hỗ trợ đối chiếu dữ liệu khi chạy thử.
+
+**Minh:** Mình phụ trách lập bảng tình huống kiểm thử và thực hiện các trường hợp xử lý đồng thời, gửi lại yêu cầu và gián đoạn trong phạm vi môi trường hiện có. Mình lưu lại kết quả chạy và ghi rõ những giới hạn của từng tình huống.
+
+**Trang:** Mình phụ trách tổng hợp báo cáo, sắp xếp ảnh minh chứng và chuẩn bị slide. Mình sẽ lập danh sách nội dung cần có để mọi người gửi đúng phần. Khi ghép xong, mình gửi lại cả nhóm kiểm tra nội dung và số liệu.
+
+**Triệu:** Phần quay demo cuối cùng thì cả nhóm cùng tham gia. Mỗi người trình bày phần mình phụ trách để khi được hỏi có thể giải thích rõ.
+
+**Như:** Được. Những nội dung liên quan giữa hai phần thì mình với Minh sẽ kiểm tra cùng nhau, nhất là lúc đối chiếu dữ liệu sau khi chạy.
+
+**Minh:** Mình sẽ gửi trước bảng tình huống để Triệu xem thao tác trên giao diện có phù hợp không.
+
+**Trang:** Mình cũng sẽ gửi sườn báo cáo sớm để mọi người biết phần của mình nằm ở đâu.
+
+---
+
+**7. Thống nhất thời gian và sản phẩm cần gửi**
+
+**Triệu:** Về thời gian, mình đề xuất chia thành ba mốc.
+
+Trong ngày tiếp theo, mỗi người gửi danh sách việc cụ thể và những chỗ đang vướng. Như gửi bản sơ đồ dữ liệu đầu tiên, Minh gửi bảng tình huống kiểm thử, Trang gửi sườn báo cáo, còn mình gửi danh sách chức năng cần rà.
+
+Trong hai ngày tiếp theo, nhóm hoàn thành phần kiểm tra chính. Những lỗi ảnh hưởng đến việc đặt vé hoặc làm sai dữ liệu thì ưu tiên xử lý trước. Những phần trình bày sẽ hoàn thiện sau khi kết quả chạy đã ổn.
+
+Sau đó dành thêm một buổi để ghép báo cáo, kiểm tra minh chứng và chạy thử toàn bộ phần trình diễn.
+
+**Trang:** Mọi người gửi nội dung theo cùng một thư mục chung. Mình sẽ chia thành mã nguồn, dữ liệu, kết quả chạy, ảnh minh chứng và báo cáo để dễ tìm.
+
+**Như:** Phần dữ liệu mình gửi kèm hướng dẫn ngắn về cách tạo hoặc nạp dữ liệu. Như vậy khi đổi máy vẫn có thể chạy lại.
+
+**Minh:** Mình gửi cả cách chạy từng tình huống và kết quả đã ghi nhận. Nếu có tình huống chưa thực hiện được thì mình ghi rõ lý do để nhóm quyết định cách xử lý.
+
+**Triệu:** Được. Trước khi kết thúc cuộc họp, nhóm mình điền ngày giờ cụ thể cho từng mốc vào biên bản. Nếu ai gặp vướng mắc thì báo sớm để điều chỉnh hoặc hỗ trợ.
+
+---
+
+**8. Chốt cuộc họp**
+
+**Triệu:** Mình nhắc lại kết quả thống nhất. Nhóm có bảy công việc chính, chia cho bốn người. Mình phụ trách chức năng và giao diện; Như phụ trách dữ liệu và sơ đồ; Minh phụ trách kiểm thử; Trang phụ trách báo cáo, minh chứng và slide.
+
+Khi làm báo cáo, mọi kết quả đều lấy từ lần chạy thực tế. Phần nào chưa kiểm tra thì ghi rõ để tiếp tục thực hiện. Trước khi nộp, cả nhóm sẽ cùng xem lại báo cáo và chạy thử phần trình diễn.
+
+**Như:** Mình thống nhất. Mình sẽ bắt đầu rà cấu trúc dữ liệu và gửi sơ đồ để mọi người góp ý.
+
+**Minh:** Mình thống nhất. Mình sẽ chuẩn bị bảng tình huống trước, sau đó phối hợp chạy và đối chiếu kết quả.
+
+**Trang:** Mình thống nhất. Mình sẽ chuẩn bị sườn báo cáo, ghi lại phân công và các mốc thời gian của nhóm.
+
+**Triệu:** Vậy mình kết thúc cuộc họp ở đây. Mọi người làm theo phần đã nhận, có vấn đề thì trao đổi trong nhóm để xử lý.

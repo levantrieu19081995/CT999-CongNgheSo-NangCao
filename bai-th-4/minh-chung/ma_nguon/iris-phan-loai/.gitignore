@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+.pytest_cache/
+.env
+*.inspect.ndjson
+*.aux
+*.log
+*.out
+*.synctex.gz
+~$*

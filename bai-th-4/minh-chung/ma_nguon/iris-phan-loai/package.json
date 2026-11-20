@@ -1,0 +1,14 @@
+{
+  "name": "ct999-iris-phan-loai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tao PowerPoint tu Markdown cho bai thuc hanh CT999",
+  "license": "MIT",
+  "scripts": {
+    "slides": "node src/tao_slide.mjs docs/noi_dung_slide.md results/Thuyet_trinh_Iris.pptx"
+  },
+  "dependencies": {
+    "@oai/artifact-tool": "2.8.167"
+  }
+}

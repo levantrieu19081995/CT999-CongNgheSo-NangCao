@@ -1,15 +1,43 @@
-# Tep tam khi soan va kiem tra bai
-.work-bth*/
-.chart-data-*/
+# Keep coursework, sources, data, documents and evidence regardless of file type.
+# Exclude installed dependencies and reproducible build/cache files.
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.next/
+**/target/
+**/dist/
+**/build/
+**/out/
+**/.turbo/
+**/.cache/
+**/coverage/
+**/.svn/
+**/.vercel/
+**/.yarn/cache/
+**/.pnp.*
+**/.next.zip
+*.py[cod]
+*.class
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.DS_Store
+Thumbs.db
 ~$*
+.~lock.*#
 ~WRL*.tmp
 *.inspect.ndjson
 
-# Thu vien va moi truong chay cuc bo
-node_modules/
-__pycache__/
-*.py[cod]
-.venv/
+# Local credentials; safe example files can be versioned.
 .env
 .env.*
 !.env.example
+!.env.*.example
+
+# Temporary document rendering work.
+.work-bth*/
+.chart-data-*/

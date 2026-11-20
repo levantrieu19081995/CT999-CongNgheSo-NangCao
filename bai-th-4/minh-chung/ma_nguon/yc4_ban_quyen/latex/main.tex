@@ -1,0 +1,75 @@
+\documentclass[runningheads]{llncs}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{booktabs,tabularx,array}
+\usepackage[hidelinks]{hyperref}
+\begin{document}
+\title{Tìm hiểu giấy phép nguồn mở qua Bash, React và TensorFlow}
+\titlerunning{Giấy phép nguồn mở của ba dự án CNTT}
+\author{Lê Văn Triệu}
+\authorrunning{Lê Văn Triệu}
+\institute{Trường Đại học Cần Thơ\\Học phần CT999 -- M2526034\\\email{lvtrieu@ctu.edu.vn}}
+\maketitle
+\begin{abstract}
+Bài thực hành tìm hiểu ba dự án dùng các giấy phép khác nhau: Bash với GPL, React với MIT và TensorFlow với Apache 2.0. Nội dung đối chiếu quyền sử dụng, sửa đổi và phân phối, đồng thời xem xét điều kiện khi đưa mã vào một sản phẩm. Từ đó lựa chọn MIT cho phần mã nguồn tự viết của dự án phân loại Iris. Dữ liệu và tài liệu lấy từ nguồn khác được ghi giấy phép riêng.
+\keywords{Nguồn mở \and GPL \and MIT \and Apache 2.0}
+\end{abstract}
+
+\section{Cách chọn và kiểm tra nguồn}
+Chọn Bash, React và TensorFlow vì cả ba có mã nguồn công khai nhưng phục vụ các nhu cầu khác nhau. Đọc trang dự án, tệp giấy phép và tài liệu chính thức; lưu các bản giấy phép đã đọc trong thư mục \texttt{tai\_lieu}. Thông tin được ghi nhận ngày 17/11/2026. Số sao GitHub là một chỉ dấu mức quan tâm tại thời điểm đó, không dùng để kết luận chất lượng phần mềm.
+
+\section{Tìm hiểu ba dự án}
+\subsection{Bash và GPL}
+Bash là trình thông dịch lệnh của GNU, hỗ trợ chạy lệnh tương tác và viết shell script~\cite{bash}. Cộng đồng sử dụng các danh sách thư \texttt{help-bash} để trao đổi cách dùng và \texttt{bug-bash} để báo lỗi, thảo luận phát triển. Bài thực hành kiểm tra tệp \texttt{COPYING} trong gói mã nguồn Bash 5.3 tải từ máy chủ GNU; không dùng số sao của một bản sao GitHub để đại diện cho cộng đồng Bash.
+
+GPL cho phép sử dụng, sửa đổi và phân phối, kể cả có thu phí~\cite{gpl}. Khi phân phối chương trình được GPL bao phủ ở dạng nhị phân, cần đáp ứng yêu cầu về mã nguồn tương ứng theo giấy phép. Các sửa đổi thuộc tác phẩm GPL khi phân phối cũng phải giữ các quyền mà GPL yêu cầu. Việc chỉ sửa và dùng nội bộ không đồng nghĩa với nghĩa vụ đăng công khai mọi sửa đổi. Khi kết hợp vào sản phẩm khác, cần xem phần nào tạo thành tác phẩm kết hợp và phần nào chỉ được phân phối cạnh nhau.
+
+\subsection{React và MIT}
+React là thư viện xây dựng giao diện bằng các thành phần~\cite{react}. Kho chính tại thời điểm kiểm tra là \texttt{react/react}. GitHub ghi nhận 252,727 sao. Mã nguồn, vấn đề đang trao đổi và các đề nghị thay đổi nằm công khai trong kho, tạo điều kiện cho người dùng theo dõi và đóng góp.
+
+Tệp \texttt{LICENSE} của React sử dụng MIT~\cite{mit}. Giấy phép cho phép dùng, sao chép, sửa đổi, phân phối và bán phần mềm, với điều kiện giữ thông báo bản quyền và nội dung cấp phép trong các bản sao hoặc phần đáng kể của phần mềm. MIT không đặt yêu cầu chung phải mở mã nguồn của mọi sản phẩm sử dụng thư viện. Điều khoản miễn bảo đảm cũng cần được giữ lại.
+
+\subsection{TensorFlow và Apache 2.0}
+TensorFlow cung cấp công cụ tính toán và xây dựng mô hình học máy~\cite{tensorflow}. Kho \texttt{tensorflow/tensorflow} ghi nhận 201,612 sao ngày kiểm tra. Dự án có tài liệu, báo lỗi và hoạt động đóng góp trên GitHub. Số sao này chỉ dùng để mô tả quy mô quan tâm công khai, không so trực tiếp với danh sách thư của Bash.
+
+Apache 2.0 cho phép sử dụng và phân phối cả mã nguồn lẫn bản đã biên dịch~\cite{apache}. Khi phân phối lại cần cung cấp giấy phép, giữ các thông báo liên quan, ghi rõ tệp đã sửa và xử lý nội dung \texttt{NOTICE} nếu tác phẩm có tệp này. Giấy phép có điều khoản cấp quyền sáng chế và điều kiện chấm dứt quyền đó khi có một số hành vi kiện tụng sáng chế. Quyền sử dụng nhãn hiệu không được cấp chung chỉ vì mã nguồn dùng Apache 2.0.
+
+\section{So sánh và lựa chọn}\label{sec:compare}
+\begin{table}[ht]
+\caption{Một số điểm cần xem khi tái sử dụng mã nguồn.}\label{tab:compare}
+\small
+\begin{tabularx}{\textwidth}{p{2.5cm}XXX}
+\toprule
+Tiêu chí & GPLv3 & MIT & Apache 2.0 \\
+\midrule
+Dùng và sửa & Cho phép & Cho phép & Cho phép \\
+Phân phối & Giữ nghĩa vụ GPL đối với phần được bao phủ & Giữ bản quyền và giấy phép & Giữ giấy phép, thông báo và ghi sửa đổi \\
+Mã nguồn tương ứng & Có nghĩa vụ khi phân phối theo các điều kiện GPL & Không có yêu cầu mở mã nguồn chung & Không có yêu cầu mở mã nguồn chung \\
+Sản phẩm đóng & Cần xem phạm vi tác phẩm và cách kết hợp & Thường thuận tiện hơn khi giữ thông báo & Thường thuận tiện hơn, chú ý NOTICE và sáng chế \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+GPL phù hợp khi tác giả muốn người nhận bản phân phối tiếp tục có quyền với mã nguồn được GPL bao phủ. MIT có văn bản ngắn, thuận tiện cho các ví dụ và thư viện muốn được tái sử dụng rộng. Apache 2.0 phù hợp khi dự án cần nêu rõ hơn một số điều kiện về thông báo, sửa đổi và quyền sáng chế. Cả ba đều cho phép hoạt động thương mại trong phạm vi đáp ứng giấy phép; không nên đồng nhất nguồn mở với cấm thu phí.
+
+Về cộng đồng, GPL duy trì nghĩa vụ chia sẻ phần mã được bao phủ khi phân phối, còn MIT và Apache 2.0 tạo điều kiện kết hợp mã vào nhiều loại sản phẩm hơn. Đây là tác động từ các điều kiện cấp phép, không đủ để dự đoán một dự án sẽ có nhiều người đóng góp. Tài liệu, chất lượng mã và cách tiếp nhận đóng góp cũng cần được xem xét.
+
+\section{Áp dụng vào dự án Iris}
+Dự án thực hành được tổ chức thành \texttt{data/}, \texttt{src/}, \texttt{docs/} và \texttt{results/}. README mô tả dữ liệu, cách chạy và kết quả. \texttt{CONTRIBUTING.md} hướng dẫn gửi thay đổi, còn \texttt{CITATION.cff} cung cấp thông tin trích dẫn kho. Phần mã tự viết chọn MIT để người khác thuận tiện đọc, chạy lại và sửa cho bài tập của họ.
+
+Tệp LICENSE của kho không thay thế giấy phép của các thành phần lấy từ nguồn khác. Dữ liệu Iris giữ CC BY 4.0 của UCI~\cite{iris}. Lớp \texttt{llncs.cls} và tệp kiểu tham khảo của Springer giữ thông báo gốc. Các trường hợp này được liệt kê trong \texttt{THIRD\_PARTY\_NOTICES.md}. Khi thêm thư viện hoặc dữ liệu mới, cần kiểm tra lại nguồn trước khi phân phối.
+
+\section{Nhận xét}
+Sau khi đối chiếu Bảng~\ref{tab:compare}, em chọn MIT cho mã nguồn thực hành Iris vì muốn người học khác dễ chạy và điều chỉnh ví dụ. Với một dự án muốn giữ nghĩa vụ cung cấp mã nguồn tương ứng khi phân phối phần được bao phủ, GPL là lựa chọn cần tìm hiểu kỹ. Khi sử dụng Apache 2.0, cần đọc cả tệp LICENSE và NOTICE của dự án cụ thể. Việc lựa chọn dựa trên cách dùng và cách phân phối dự kiến của từng phần mã.
+
+\begin{thebibliography}{8}
+\bibitem{bash} GNU Project: Bash. \url{https://www.gnu.org/software/bash/}.
+\bibitem{gpl} Free Software Foundation: GNU General Public License, version 3. \url{https://www.gnu.org/licenses/gpl-3.0.html}.
+\bibitem{react} React: Kho mã nguồn chính. \url{https://github.com/react/react}.
+\bibitem{mit} React: MIT License. \url{https://github.com/react/react/blob/main/LICENSE}.
+\bibitem{tensorflow} TensorFlow: Kho mã nguồn chính. \url{https://github.com/tensorflow/tensorflow}.
+\bibitem{apache} Apache Software Foundation: Apache License, version 2.0. \url{https://www.apache.org/licenses/LICENSE-2.0}.
+\bibitem{iris} Fisher, R.: Iris [Dataset]. UCI Machine Learning Repository (1936). \doi{10.24432/C56C76}.
+\end{thebibliography}
+\end{document}

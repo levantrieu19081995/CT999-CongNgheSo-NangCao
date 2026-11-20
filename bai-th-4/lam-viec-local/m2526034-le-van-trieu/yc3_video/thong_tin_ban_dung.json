@@ -1,0 +1,82 @@
+{
+  "voices": [
+    "gTTS Vietnamese"
+  ],
+  "rate": "+0%",
+  "duration_seconds": 170.04,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 25,
+  "subtitles": "Phu_de_Iris.srt",
+  "subtitles_burned_in": true,
+  "timeline": [
+    {
+      "scene": 1,
+      "title": "Khảo sát phân loại hoa Iris",
+      "start": 0.0,
+      "end": 13.0,
+      "spoken_seconds": 13.46,
+      "tempo": 1.085484
+    },
+    {
+      "scene": 2,
+      "title": "So sánh mô hình trên cùng dữ liệu",
+      "start": 13.0,
+      "end": 37.0,
+      "spoken_seconds": 26.78,
+      "tempo": 1.144444
+    },
+    {
+      "scene": 3,
+      "title": "Kiểm tra và làm sạch dữ liệu",
+      "start": 37.0,
+      "end": 57.0,
+      "spoken_seconds": 20.38,
+      "tempo": 1.050515
+    },
+    {
+      "scene": 4,
+      "title": "Chia dữ liệu trước khi đánh giá",
+      "start": 57.0,
+      "end": 81.0,
+      "spoken_seconds": 25.78,
+      "tempo": 1.101709
+    },
+    {
+      "scene": 5,
+      "title": "Kết quả kiểm định chéo",
+      "start": 81.0,
+      "end": 104.0,
+      "spoken_seconds": 27.36,
+      "tempo": 1.221429
+    },
+    {
+      "scene": 6,
+      "title": "Kết quả trên 45 mẫu kiểm tra",
+      "start": 104.0,
+      "end": 128.0,
+      "spoken_seconds": 28.68,
+      "tempo": 1.225641
+    },
+    {
+      "scene": 7,
+      "title": "Xem lại kết quả bằng dashboard",
+      "start": 128.0,
+      "end": 158.0,
+      "spoken_seconds": 35.26,
+      "tempo": 1.19932
+    },
+    {
+      "scene": 8,
+      "title": "Cảm ơn thầy và các bạn",
+      "start": 158.0,
+      "end": 170.0,
+      "spoken_seconds": 12.43,
+      "tempo": 1.090351
+    }
+  ],
+  "data_sha256": "9528fd2831a049f39ca5f2c02fcf94f5b3f414697c558011ca139416980fbb19",
+  "video_sha256": "b52abdcbe126ed2cdbf8c6560e15d8d671047ce2142ba01a43810f9009780bad"
+}

@@ -1,0 +1,7 @@
+Thiết kế Canva
+https://www.canva.com/design/DAHbaY4nteY/L6--DIGIcBH8d2w05fgG2Q/edit
+
+Tệp tải xuống được đặt tên Video_nghien_cuu_Iris.mp4.
+Xuất ngày 20/11/2026, MP4 1280 x 720, thời lượng 170.05 giây.
+Ảnh thao tác: ../minh_chung/23_canva_xuat_video.jpg và 24_canva_hoan_tat.jpg.
+Bản dựng nguồn: Video_dung_tu_khung_hinh.mp4; thông số: thong_tin_ban_dung.json.

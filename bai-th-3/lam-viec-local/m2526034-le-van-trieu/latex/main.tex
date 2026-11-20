@@ -1,0 +1,61 @@
+% Bai tap 2 - Bai thuc hanh 3 - CT999 - pdfLaTeX
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\raggedbottom
+\begin{document}
+\title[Đạo đức khi sử dụng AI trong CNTT]{Quan điểm cá nhân về đạo đức khi sử dụng AI trong lĩnh vực công nghệ thông tin}
+\author*{Lê Văn Triệu}\email{lvtrieu@ctu.edu.vn}
+\affil{Học phần CT999 -- Công nghệ số nâng cao\\Mã số học viên M2526034}
+\abstract{AI có thể hỗ trợ giải thích kiến thức, gợi ý mã nguồn và tìm lỗi. Tuy vậy, người sử dụng vẫn cần hiểu phần việc mình làm và kiểm tra kết quả trước khi đưa vào báo cáo hoặc chương trình. Bài viết trình bày quan điểm cá nhân về tính trung thực, bảo vệ dữ liệu, kiểm tra mã nguồn và trách nhiệm của người dùng AI. Các tình huống được chọn gần với việc học và làm bài tập của sinh viên công nghệ thông tin.}
+\keywords{Đạo đức, trí tuệ nhân tạo, công nghệ thông tin, sinh viên}
+\maketitle
+
+\section{Vì sao cần quan tâm đến cách sử dụng AI}
+Trong học tập, một câu hỏi về lỗi chương trình có thể nhận được lời giải thích và đoạn mã gợi ý chỉ sau vài giây. Điều này thuận tiện khi người học đang vướng ở một bước cụ thể. Tuy nhiên, nếu chép cả lời giải mà không đọc lại, người nộp bài sẽ khó giải thích vì sao chương trình chạy đúng hoặc vì sao kết quả thay đổi khi dữ liệu khác đi.
+
+Theo em, có thể sử dụng AI để hỗ trợ học và làm phần mềm, nhưng phải xác định rõ phần nào do công cụ gợi ý và phần nào đã được tự kiểm tra. Một bài làm có trách nhiệm cần cho người đọc thấy cách thực hiện, dữ liệu sử dụng và kết quả thực tế. Các nguyên tắc về trung thực, quyền riêng tư và chất lượng nghề nghiệp của ACM là tài liệu tham khảo để xem xét những việc này~\cite{acm2018}.
+
+\section{Trung thực trong bài làm và tài liệu tham khảo}
+Nếu dùng AI để gợi ý dàn ý, giải thích thuật toán hoặc sửa một đoạn mã, em cho rằng nên ghi nhận phạm vi hỗ trợ theo yêu cầu của học phần. Người viết cần đọc và sửa lại nội dung theo hiểu biết của mình. Không nên ghi rằng đã chạy chương trình khi mới chỉ có mã nguồn, hoặc đưa số liệu do công cụ tạo ra thành kết quả thực nghiệm.
+
+Tài liệu tham khảo cũng cần được mở và đối chiếu. Chẳng hạn, khi nhận được một tên bài báo và DOI, cần kiểm tra trên trang nhà xuất bản xem bài đó có tồn tại, tác giả và năm công bố có khớp hay không. Nếu không tìm thấy nguồn thì bỏ trích dẫn đó. Việc một câu trả lời được viết trôi chảy chưa đủ để dùng làm căn cứ.
+
+Trong báo cáo thực hành, ảnh minh chứng cần được chụp sau khi thao tác thật. Ảnh nên có đủ phần lệnh hoặc giao diện và kết quả cần kiểm tra. Cách ghi nhận này giúp giảng viên đối chiếu được báo cáo với tệp nộp kèm.
+
+\section{Bảo vệ dữ liệu khi hỏi công cụ AI}
+Một đoạn mã gửi để hỏi lỗi đôi khi chứa mật khẩu cơ sở dữ liệu, mã truy cập hoặc thông tin của người khác. Trước khi gửi, cần đọc lại và bỏ các chi tiết đó. Với bài tập xử lý dữ liệu, có thể dùng một vài dòng dữ liệu giả được ghi rõ là ví dụ để mô tả cấu trúc và tái hiện lỗi, thay vì gửi nguyên bảng dữ liệu cá nhân.
+
+Ví dụ, nếu cần hỏi cách ghép hai bảng theo mã sinh viên, chỉ cần tạo các mã SV01, SV02 cùng vài giá trị minh họa. Không cần gửi họ tên, email và điểm thật của cả lớp. Đây là cách em lựa chọn để giảm lượng thông tin đưa ra ngoài mà vẫn mô tả được vấn đề kỹ thuật. UNESCO cũng đặt việc bảo vệ dữ liệu cá nhân và sự giám sát của con người trong các nguyên tắc đạo đức AI~\cite{unesco2021}.
+
+\section{Kiểm tra mã nguồn và kết quả}
+Đoạn mã do AI gợi ý cần được xem như một phương án để thử. Với một hàm tính toán, trước hết nên kiểm tra bằng ví dụ nhỏ có thể tính tay. Sau đó thử thêm đầu vào rỗng, dữ liệu thiếu, giá trị không hợp lệ và các trường hợp biên phù hợp với bài toán.
+
+Ví dụ, khi làm sạch dữ liệu bằng \texttt{dropna()}, số dòng giảm chưa có nghĩa là cách xử lý đã phù hợp. Cần biết dòng nào bị bỏ, vì sao bị bỏ và việc đó ảnh hưởng gì đến kết quả. Nếu AI đề xuất thay thế giá trị thiếu bằng trung bình, người làm phải xem biến đó có phù hợp để tính trung bình hay không.
+
+Đối với mã truy vấn hoặc chức năng đăng nhập, em sẽ chú ý đến tham số đầu vào và cách xử lý lỗi. Không nên đưa đoạn mã vào chương trình chỉ vì nó chạy được với một ví dụ. Khi chưa kiểm tra đủ, cần ghi rõ giới hạn thay vì kết luận chương trình đã an toàn.
+
+\section{Công bằng và trách nhiệm của người sử dụng}
+Một mô hình có kết quả trung bình tốt vẫn có thể hoạt động kém với một nhóm dữ liệu ít xuất hiện. Vì vậy, khi xây dựng ứng dụng AI, cần xem dữ liệu được thu thập từ đâu và nhóm nào còn thiếu. Nếu bài thực hành chỉ sử dụng một bộ dữ liệu nhỏ, kết luận nên giới hạn trong bộ dữ liệu đó.
+
+Với chức năng có thể ảnh hưởng đến người khác, người dùng cần có cách xem lại kết quả và phản ánh khi phát hiện sai. Em không cho rằng có thể chuyển trách nhiệm cho công cụ bằng câu \textit{AI trả lời như vậy}. Người lựa chọn đầu vào, chấp nhận đầu ra và đưa kết quả vào sử dụng vẫn phải kiểm tra phần việc của mình.
+
+\section{Cách áp dụng trong bài thực hành}
+Khi dùng AI hỗ trợ một bài lập trình, em chọn cách làm từng bước: tự đọc yêu cầu, thử trên dữ liệu nhỏ, hỏi đúng chỗ chưa hiểu, rồi kiểm tra lại bằng chương trình. Mã nguồn và dữ liệu cần được lưu cùng báo cáo để có thể chạy lại. Các phần chưa thực hiện xong được tách khỏi kết quả đã có.
+
+Theo em, giá trị của AI trong học tập nằm ở việc giúp hiểu và giải quyết vấn đề tốt hơn. Để giữ được điều đó, người học phải dành thời gian đọc mã, đối chiếu tài liệu và giải thích kết quả bằng lời của mình. Một bài làm ngắn nhưng kiểm tra được sẽ có ích hơn một bài dài mà người nộp không hiểu nội dung.
+
+\begin{thebibliography}{2}
+\bibitem{acm2018}
+Association for Computing Machinery (2018).
+\textit{ACM Code of Ethics and Professional Conduct}.
+\url{https://www.acm.org/code-of-ethics}
+
+\bibitem{unesco2021}
+UNESCO (2021).
+\textit{Recommendation on the Ethics of Artificial Intelligence}.
+\url{https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence}
+\end{thebibliography}
+\end{document}

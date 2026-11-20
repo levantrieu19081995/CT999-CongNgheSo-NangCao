@@ -1,0 +1,37 @@
+{
+  "checked_date": "2026-11-17",
+  "repositories": [
+    {
+      "full_name": "react/react",
+      "html_url": "https://github.com/react/react",
+      "description": "The library for web and native user interfaces.",
+      "stargazers_count": 252727,
+      "forks_count": 52820,
+      "open_issues_count": 1546,
+      "pushed_at": "2026-11-17T01:20:56Z",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    {
+      "full_name": "tensorflow/tensorflow",
+      "html_url": "https://github.com/tensorflow/tensorflow",
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "stargazers_count": 201612,
+      "forks_count": 77968,
+      "open_issues_count": 3442,
+      "pushed_at": "2026-11-17T08:42:11Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    }
+  ]
+}

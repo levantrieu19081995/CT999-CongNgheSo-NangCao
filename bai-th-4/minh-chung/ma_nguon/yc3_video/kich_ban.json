@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Khảo sát phân loại hoa Iris",
+    "section": "MỞ ĐẦU",
+    "seconds": 13,
+    "bullets": [
+      "CT999 · Công nghệ số nâng cao",
+      "Đại học Cần Thơ",
+      "Lê Văn Triệu · La Quỳnh Như",
+      "Đinh Hoàng Minh · Võ Thị Thùy Trang"
+    ],
+    "narration": "Kính chào thầy và các bạn. Nhóm trình bày khảo sát bốn mô hình phân loại hoa Iris. Video tóm tắt cách xử lý dữ liệu, phương pháp đánh giá và kết quả thực nghiệm."
+  },
+  {
+    "title": "So sánh mô hình trên cùng dữ liệu",
+    "section": "VẤN ĐỀ NGHIÊN CỨU",
+    "seconds": 24,
+    "bullets": [
+      "Bốn số đo → một trong ba loài hoa",
+      "kNN · SVM · Cây quyết định · Rừng ngẫu nhiên",
+      "Cùng dữ liệu và cách chia để so sánh",
+      "Câu hỏi: kết quả có nhất quán giữa CV và tập kiểm tra?"
+    ],
+    "figure": "01_petal_scatter.png",
+    "narration": "Bài toán cần xác định loài hoa từ bốn kích thước của đài hoa và cánh hoa. Iris có dữ liệu nhỏ, dễ quan sát nên phù hợp để thực hành phân loại. Nhóm so sánh k láng giềng, SVM, cây quyết định và rừng ngẫu nhiên. Câu hỏi đặt ra là kết quả kiểm định chéo có nhất quán với kết quả trên tập kiểm tra hay không."
+  },
+  {
+    "title": "Kiểm tra và làm sạch dữ liệu",
+    "section": "PHƯƠNG PHÁP · DỮ LIỆU",
+    "seconds": 20,
+    "bullets": [
+      "Nguồn: UCI Machine Learning Repository",
+      "150 dòng gốc · 0 ô thiếu",
+      "Loại 3 dòng trùng → 147 mẫu",
+      "setosa 48 · versicolor 50 · virginica 49"
+    ],
+    "figure": "02_class_counts.png",
+    "narration": "Dữ liệu UCI có một trăm năm mươi dòng, không có ô thiếu. Kiểm tra bốn thuộc tính cùng nhãn loài phát hiện ba dòng trùng. Sau khi loại trùng, còn một trăm bốn mươi bảy mẫu, với số lượng mỗi loài như biểu đồ. Bốn số đo đều tính bằng xen ti mét."
+  },
+  {
+    "title": "Chia dữ liệu trước khi đánh giá",
+    "section": "PHƯƠNG PHÁP · THỰC NGHIỆM",
+    "seconds": 24,
+    "bullets": [
+      "102 mẫu huấn luyện · 45 mẫu kiểm tra",
+      "Chia phân tầng · random_state = 42",
+      "5 fold trên tập huấn luyện",
+      "Chuẩn hóa kNN và SVM trong Pipeline",
+      "kNN k=5 · Cây sâu tối đa 3 · Rừng 200 cây"
+    ],
+    "narration": "Chương trình dùng Python để chia phân tầng dữ liệu thành một trăm linh hai mẫu huấn luyện và bốn mươi lăm mẫu kiểm tra. Hạt giống được giữ cố định là bốn mươi hai. Kiểm định chéo năm phần chỉ dùng tập huấn luyện. Bước chuẩn hóa của k láng giềng và SVM nằm trong chuỗi xử lý, chỉ học từ phần huấn luyện. Tập kiểm tra được giữ riêng."
+  },
+  {
+    "title": "Kết quả kiểm định chéo",
+    "section": "KẾT QUẢ · 5 FOLD",
+    "seconds": 23,
+    "bullets": [
+      "Chỉ số: F1 macro trung bình",
+      "kNN: 0,9602 · SVM: 0,9597",
+      "Cây quyết định: 0,9501",
+      "Rừng ngẫu nhiên: 0,9501",
+      "Chênh lệch kNN và SVM rất nhỏ"
+    ],
+    "figure": "04_cv_f1.png",
+    "narration": "Trong kiểm định chéo, k láng giềng đạt F một macro trung bình không phẩy chín sáu không hai. SVM đạt không phẩy chín năm chín bảy. Cây quyết định và rừng ngẫu nhiên đều xấp xỉ không phẩy chín năm. Khoảng cách giữa k láng giềng và SVM rất nhỏ. Vì vậy, chưa thể kết luận một mô hình luôn tốt hơn từ lần chạy này."
+  },
+  {
+    "title": "Kết quả trên 45 mẫu kiểm tra",
+    "section": "KẾT QUẢ · TẬP GIỮ RIÊNG",
+    "seconds": 24,
+    "bullets": [
+      "Cây quyết định: 42/45 đúng · 93,33%",
+      "Ba mô hình còn lại: 41/45 · 91,11%",
+      "SVM: setosa đúng 15/15",
+      "Nhầm lẫn chủ yếu: versicolor ↔ virginica",
+      "Một mẫu tương ứng khoảng 2,22 điểm %"
+    ],
+    "figure": "05_svm_confusion.png",
+    "narration": "Trên bốn mươi lăm mẫu kiểm tra, cây quyết định dự đoán đúng bốn mươi hai mẫu. Ba mô hình còn lại đúng bốn mươi mốt mẫu. SVM nhận diện đúng toàn bộ setosa. Các sai sót nằm ở versicolor và virginica, là hai loài có vùng số đo giao nhau. Với tập kiểm tra nhỏ này, chỉ một mẫu đã tương ứng khoảng hai phẩy hai hai điểm phần trăm độ chính xác."
+  },
+  {
+    "title": "Xem lại kết quả bằng dashboard",
+    "section": "PHÂN TÍCH VÀ KẾT LUẬN",
+    "seconds": 30,
+    "bullets": [
+      "Chọn loài, chọn hai biến, đổi biểu đồ",
+      "Tải CSV và PDF theo bộ lọc",
+      "Chỉ số mô hình ghi riêng cho toàn bộ dữ liệu",
+      "Kết quả phụ thuộc cách chia và cỡ mẫu",
+      "Tiếp theo: thử nhiều lần chia và thêm dữ liệu"
+    ],
+    "dashboard": true,
+    "narration": "Dashboard cho phép chọn loài, thay đổi hai trục, xem biểu đồ và tải báo cáo PDF hoặc CSV. Ví dụ, chỉ chọn setosa thì báo cáo có bốn mươi tám mẫu. Các chỉ số mô hình vẫn được ghi riêng cho dữ liệu đầy đủ. Kết quả cho thấy thứ hạng kiểm định chéo và tập kiểm tra có thể khác nhau. Đây mới là kết quả của một lần chia trên dữ liệu nhỏ. Hướng tiếp theo là thử nhiều lần chia và thêm dữ liệu để đánh giá ổn định hơn."
+  },
+  {
+    "title": "Cảm ơn thầy và các bạn",
+    "section": "KẾT THÚC",
+    "seconds": 12,
+    "bullets": [
+      "Mã nguồn, dữ liệu và kết quả được lưu kèm bài nộp",
+      "Dữ liệu UCI Iris · CC BY 4.0",
+      "Mã nguồn dự án · MIT",
+      "Thuyết minh tự động · phụ đề tiếng Việt"
+    ],
+    "narration": "Mã nguồn, dữ liệu và kết quả được lưu kèm bài nộp để chạy lại. Video dùng giọng đọc tự động và phụ đề tiếng Việt. Nhóm cảm ơn thầy và các bạn đã theo dõi."
+  }
+]

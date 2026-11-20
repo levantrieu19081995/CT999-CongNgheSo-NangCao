@@ -1,0 +1,660 @@
+[
+  {
+    "text": "Dashboard",
+    "offset": 800000,
+    "duration": 8406250,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "cho",
+    "offset": 9206250,
+    "duration": 3362500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "phép",
+    "offset": 12568750,
+    "duration": 4203125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "chọn",
+    "offset": 16771875,
+    "duration": 4203125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "loài,",
+    "offset": 20975000,
+    "duration": 5043750,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "thay",
+    "offset": 26018750,
+    "duration": 4203125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "đổi",
+    "offset": 30221875,
+    "duration": 3362500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "hai",
+    "offset": 33584375,
+    "duration": 3362500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "trục,",
+    "offset": 36946875,
+    "duration": 5043750,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "xem",
+    "offset": 41990625,
+    "duration": 3362500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "biểu",
+    "offset": 45353125,
+    "duration": 4203125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "đồ",
+    "offset": 49556250,
+    "duration": 2521875,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "và",
+    "offset": 52078125,
+    "duration": 2521875,
+    "voice": "gTTS Vietnamese",
+    "phrase": 0
+  },
+  {
+    "text": "tải",
+    "offset": 56200000,
+    "duration": 5107692,
+    "voice": "gTTS Vietnamese",
+    "phrase": 1
+  },
+  {
+    "text": "báo",
+    "offset": 61307692,
+    "duration": 5107692,
+    "voice": "gTTS Vietnamese",
+    "phrase": 1
+  },
+  {
+    "text": "cáo",
+    "offset": 66415385,
+    "duration": 5107692,
+    "voice": "gTTS Vietnamese",
+    "phrase": 1
+  },
+  {
+    "text": "PDF",
+    "offset": 71523077,
+    "duration": 5107692,
+    "voice": "gTTS Vietnamese",
+    "phrase": 1
+  },
+  {
+    "text": "hoặc",
+    "offset": 76630769,
+    "duration": 6384615,
+    "voice": "gTTS Vietnamese",
+    "phrase": 1
+  },
+  {
+    "text": "CSV.",
+    "offset": 83015385,
+    "duration": 6384615,
+    "voice": "gTTS Vietnamese",
+    "phrase": 1
+  },
+  {
+    "text": "Ví",
+    "offset": 91000000,
+    "duration": 2651786,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "dụ,",
+    "offset": 93651786,
+    "duration": 3535714,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "chỉ",
+    "offset": 97187500,
+    "duration": 3535714,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "chọn",
+    "offset": 100723214,
+    "duration": 4419643,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "setosa",
+    "offset": 105142857,
+    "duration": 6187500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "thì",
+    "offset": 111330357,
+    "duration": 3535714,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "báo",
+    "offset": 114866071,
+    "duration": 3535714,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "cáo",
+    "offset": 118401786,
+    "duration": 3535714,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "có",
+    "offset": 121937500,
+    "duration": 2651786,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "bốn",
+    "offset": 124589286,
+    "duration": 3535714,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "mươi",
+    "offset": 128125000,
+    "duration": 4419643,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "tám",
+    "offset": 132544643,
+    "duration": 3535714,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "mẫu.",
+    "offset": 136080357,
+    "duration": 4419643,
+    "voice": "gTTS Vietnamese",
+    "phrase": 2
+  },
+  {
+    "text": "Các",
+    "offset": 142100000,
+    "duration": 2986207,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "chỉ",
+    "offset": 145086207,
+    "duration": 2986207,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "số",
+    "offset": 148072414,
+    "duration": 2239655,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "mô",
+    "offset": 150312069,
+    "duration": 2239655,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "hình",
+    "offset": 152551724,
+    "duration": 3732759,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "vẫn",
+    "offset": 156284483,
+    "duration": 2986207,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "được",
+    "offset": 159270690,
+    "duration": 3732759,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "ghi",
+    "offset": 163003448,
+    "duration": 2986207,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "riêng",
+    "offset": 165989655,
+    "duration": 4479310,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "cho",
+    "offset": 170468966,
+    "duration": 2986207,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "dữ",
+    "offset": 173455172,
+    "duration": 2239655,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "liệu",
+    "offset": 175694828,
+    "duration": 3732759,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "đầy",
+    "offset": 179427586,
+    "duration": 2986207,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "đủ.",
+    "offset": 182413793,
+    "duration": 2986207,
+    "voice": "gTTS Vietnamese",
+    "phrase": 3
+  },
+  {
+    "text": "Kết",
+    "offset": 187000000,
+    "duration": 2962500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "quả",
+    "offset": 189962500,
+    "duration": 2962500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "cho",
+    "offset": 192925000,
+    "duration": 2962500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "thấy",
+    "offset": 195887500,
+    "duration": 3703125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "thứ",
+    "offset": 199590625,
+    "duration": 2962500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "hạng",
+    "offset": 202553125,
+    "duration": 3703125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "kiểm",
+    "offset": 206256250,
+    "duration": 3703125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "định",
+    "offset": 209959375,
+    "duration": 3703125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "chéo",
+    "offset": 213662500,
+    "duration": 3703125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "và",
+    "offset": 217365625,
+    "duration": 2221875,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "tập",
+    "offset": 219587500,
+    "duration": 2962500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "kiểm",
+    "offset": 222550000,
+    "duration": 3703125,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "tra",
+    "offset": 226253125,
+    "duration": 2962500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "có",
+    "offset": 229215625,
+    "duration": 2221875,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "thể",
+    "offset": 231437500,
+    "duration": 2962500,
+    "voice": "gTTS Vietnamese",
+    "phrase": 4
+  },
+  {
+    "text": "khác",
+    "offset": 236000000,
+    "duration": 4272727,
+    "voice": "gTTS Vietnamese",
+    "phrase": 5
+  },
+  {
+    "text": "nhau.",
+    "offset": 240272727,
+    "duration": 5127273,
+    "voice": "gTTS Vietnamese",
+    "phrase": 5
+  },
+  {
+    "text": "Đây",
+    "offset": 247000000,
+    "duration": 3096296,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "mới",
+    "offset": 250096296,
+    "duration": 3096296,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "là",
+    "offset": 253192593,
+    "duration": 2322222,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "kết",
+    "offset": 255514815,
+    "duration": 3096296,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "quả",
+    "offset": 258611111,
+    "duration": 3096296,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "của",
+    "offset": 261707407,
+    "duration": 3096296,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "một",
+    "offset": 264803704,
+    "duration": 3096296,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "lần",
+    "offset": 267900000,
+    "duration": 3096296,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "chia",
+    "offset": 270996296,
+    "duration": 3870370,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "trên",
+    "offset": 274866667,
+    "duration": 3870370,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "dữ",
+    "offset": 278737037,
+    "duration": 2322222,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "liệu",
+    "offset": 281059259,
+    "duration": 3870370,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "nhỏ.",
+    "offset": 284929630,
+    "duration": 3870370,
+    "voice": "gTTS Vietnamese",
+    "phrase": 6
+  },
+  {
+    "text": "Hướng",
+    "offset": 290400000,
+    "duration": 4374194,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "tiếp",
+    "offset": 294774194,
+    "duration": 3645161,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "theo",
+    "offset": 298419355,
+    "duration": 3645161,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "là",
+    "offset": 302064516,
+    "duration": 2187097,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "thử",
+    "offset": 304251613,
+    "duration": 2916129,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "nhiều",
+    "offset": 307167742,
+    "duration": 4374194,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "lần",
+    "offset": 311541935,
+    "duration": 2916129,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "chia",
+    "offset": 314458065,
+    "duration": 3645161,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "và",
+    "offset": 318103226,
+    "duration": 2187097,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "thêm",
+    "offset": 320290323,
+    "duration": 3645161,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "dữ",
+    "offset": 323935484,
+    "duration": 2187097,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "liệu",
+    "offset": 326122581,
+    "duration": 3645161,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "để",
+    "offset": 329767742,
+    "duration": 2187097,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "đánh",
+    "offset": 331954839,
+    "duration": 3645161,
+    "voice": "gTTS Vietnamese",
+    "phrase": 7
+  },
+  {
+    "text": "giá",
+    "offset": 337200000,
+    "duration": 3411765,
+    "voice": "gTTS Vietnamese",
+    "phrase": 8
+  },
+  {
+    "text": "ổn",
+    "offset": 340611765,
+    "duration": 2558824,
+    "voice": "gTTS Vietnamese",
+    "phrase": 8
+  },
+  {
+    "text": "định",
+    "offset": 343170588,
+    "duration": 4264706,
+    "voice": "gTTS Vietnamese",
+    "phrase": 8
+  },
+  {
+    "text": "hơn.",
+    "offset": 347435294,
+    "duration": 4264706,
+    "voice": "gTTS Vietnamese",
+    "phrase": 8
+  }
+]

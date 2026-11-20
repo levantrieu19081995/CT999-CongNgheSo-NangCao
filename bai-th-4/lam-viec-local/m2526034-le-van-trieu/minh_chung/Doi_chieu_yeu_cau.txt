@@ -1,0 +1,77 @@
+ĐỐI CHIẾU BÀI THỰC HÀNH 4
+Lê Văn Triệu – M2526034
+Ngày rà soát: 20/11/2026
+Đề đối chiếu: bth04-sangtao-nd-so.pdf trong thư mục bai-th-4.
+
+1. Bài viết trên Overleaf
+Đã có PDF 5 trang và ZIP mã nguồn. Dùng mẫu LNCS, hỗ trợ tiếng Việt,
+có hình đơn, cụm 4 hình theo 2 hàng, bảng tabularx, công thức và tham chiếu.
+Có 11 tài liệu kèm DOI; các mục tài liệu đều được dẫn trong bài.
+ZIP và thư mục latex giữ cùng nội dung main.tex.
+Tệp: yc1_overleaf/Bai_1_LNCS_Iris.pdf và Bai_1_LNCS_Iris.zip.
+Minh chứng: minh_chung/01_yc1_overleaf_log.jpg đến 07_yc1_pdf_trang_5.jpg;
+minh_chung/cmd_phan_tich.png.
+
+2. Poster khoa học
+Đã có poster A0 ngang 1189 × 841 mm, thông tin học viên và giảng viên
+PGS. TS. Nguyễn Thanh Hải; có mục tiêu, dữ liệu, phương pháp, kết quả,
+thảo luận, kết luận, tài liệu tham khảo, liên hệ và QR.
+Tệp: yc2_poster/Poster_Iris_A0.pdf.
+Minh chứng: minh_chung/08_poster_A0.jpg và cmd_tao_poster.png.
+
+3. Video nhóm
+Đã có video xuất từ Canva: 170,05 giây, 1280 × 720, H.264/AAC.
+Các phần: mở đầu 13 giây; vấn đề 24; phương pháp 44; kết quả 47;
+phân tích và kết luận 30; kết thúc 12. Có giọng đọc tiếng Việt tự động,
+phụ đề ghi trên hình và SRT rời, kịch bản, khung hình và âm thanh nguồn.
+SHA-256 của MP4 khớp thông tin đã ghi khi kiểm tra toàn bộ video.
+Tệp: yc3_video/Video_nghien_cuu_Iris.mp4.
+Minh chứng: minh_chung/23_canva_xuat_video.jpg, 24_canva_hoan_tat.jpg;
+yc3_video/Canva_video.txt; minh_chung/log_kiem_tra_video.txt.
+
+4. Bản quyền và giấy phép nguồn mở
+Đã có kho GitHub, README, LICENSE MIT, CONTRIBUTING và CITATION.cff.
+Báo cáo so sánh GNU Bash, React và TensorFlow trên Overleaf có PDF 3 trang
+và ZIP nguồn. Dữ liệu UCI và tệp Springer được ghi giấy phép riêng.
+Tệp: yc4_ban_quyen/Bai_4_So_sanh_giay_phep.pdf và ZIP cùng tên.
+Minh chứng: minh_chung/09_yc4_overleaf_log.jpg đến 16_github_giay_phep.jpg.
+
+5a. CSV sang PDF
+Đã có mã nguồn và PDF 2 trang gồm mô tả, bảng dữ liệu, biểu đồ và kết luận.
+Tệp: iris-phan-loai/src/tao_bao_cao.py; results/Bao_cao_tu_dong.pdf.
+Minh chứng: minh_chung/cmd_tao_pdf.png, 17_yc5a_pdf_trang_1.jpg,
+18_yc5a_pdf_trang_2.jpg.
+
+5b. Markdown sang PowerPoint
+Đã có Markdown đầu vào, mã nguồn và PPTX 8 slide; có biểu đồ và bảng
+có thể chỉnh sửa. Bản PDF xem lại gồm 8 trang.
+Tệp: iris-phan-loai/docs/noi_dung_slide.md, src/tao_slide.mjs,
+results/Thuyet_trinh_Iris.pptx.
+Minh chứng: minh_chung/cmd_tao_slide.png và 19_yc5b_slide_1.jpg đến slide_8.jpg.
+
+5c. Mini-project nhóm
+Đã có dữ liệu UCI, làm sạch và phân loại bằng Python; có dashboard
+chọn loài, chọn biến, xem 3 loại biểu đồ, tải CSV và PDF.
+PDF tải lại từ dashboard có 48 mẫu setosa, phần mô hình ghi riêng phạm vi
+147 mẫu, chia 102 huấn luyện và 45 kiểm tra; có nhận xét và hướng phát triển.
+Cả 5 kiểm thử đều đạt. Kho GitHub chứa mã, dữ liệu, PDF và giấy phép.
+Tệp: iris-phan-loai/src/dashboard.py và dashboard_data.py;
+yc5c_dashboard/Bao_cao_Iris_theo_bo_loc.pdf.
+Minh chứng: minh_chung/20_dashboard_tong_quan.jpg, 21_dashboard_bo_loc.jpg,
+22_dashboard_tai_bao_cao.jpg và log_dashboard.txt.
+Kho: https://github.com/levantrieu19081995/ct999-iris-phan-loai
+Commit đã đối chiếu trên máy và nhánh main: 591ac1aeed34489bafbc8cb02def80eef45a6352.
+
+Đối chiếu số liệu dùng chung
+CSV gốc 150 dòng; loại 3 dòng trùng, còn 147 mẫu; chia 102/45.
+setosa 48, versicolor 50, virginica 49. Hai tập không trùng source_id.
+Đếm lại từ predictions.csv: cây quyết định đúng 42/45, ba mô hình còn lại
+đúng 41/45. Trung bình và độ lệch chuẩn CV khớp cv_scores.csv.
+Mã băm CSV khớp summary.json và dữ liệu dùng cho video.
+
+Báo cáo Word
+Times New Roman 12; tiêu đề chính 18; tiêu đề mục 14 và 12.
+Mã nguồn dùng Consolas 9,5; chú thích hình 11; đường dẫn ảnh 10.
+Có 28 hình, đánh số liên tục. Ảnh nhúng trùng tệp ảnh minh chứng;
+mã nguồn trong 4 phụ lục trùng các tệp nguồn đi kèm.
+Danh sách SHA-256 được tạo lại sau khi hoàn tất báo cáo.

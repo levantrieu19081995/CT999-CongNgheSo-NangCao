@@ -1,0 +1,207 @@
+1
+00:00:00,074 --> 00:00:02,067
+Kính chào thầy và các bạn.
+
+2
+00:00:02,174 --> 00:00:06,424
+Nhóm trình bày khảo sát bốn mô hình phân loại hoa Iris.
+
+3
+00:00:06,532 --> 00:00:11,196
+Video tóm tắt cách xử lý dữ liệu, phương pháp đánh giá và kết
+
+4
+00:00:11,304 --> 00:00:12,426
+quả thực nghiệm.
+
+5
+00:00:13,070 --> 00:00:17,523
+Bài toán cần xác định loài hoa từ bốn kích thước của đài hoa và
+
+6
+00:00:17,622 --> 00:00:18,527
+cánh hoa.
+
+7
+00:00:18,627 --> 00:00:23,290
+Iris có dữ liệu nhỏ, dễ quan sát nên phù hợp để thực hành phân
+
+8
+00:00:23,389 --> 00:00:24,023
+loại.
+
+9
+00:00:24,123 --> 00:00:29,118
+Nhóm so sánh k láng giềng, SVM, cây quyết định và rừng ngẫu
+
+10
+00:00:29,217 --> 00:00:29,834
+nhiên.
+
+11
+00:00:29,934 --> 00:00:34,151
+Câu hỏi đặt ra là kết quả kiểm định chéo có nhất quán với kết
+
+12
+00:00:34,250 --> 00:00:36,430
+quả trên tập kiểm tra hay không.
+
+13
+00:00:37,076 --> 00:00:41,876
+Dữ liệu UCI có một trăm năm mươi dòng, không có ô thiếu.
+
+14
+00:00:41,988 --> 00:00:46,426
+Kiểm tra bốn thuộc tính cùng nhãn loài phát hiện ba dòng trùng.
+
+15
+00:00:46,538 --> 00:00:51,404
+Sau khi loại trùng, còn một trăm bốn mươi bảy mẫu, với số lượng
+
+16
+00:00:51,517 --> 00:00:53,299
+mỗi loài như biểu đồ.
+
+17
+00:00:53,411 --> 00:00:56,424
+Bốn số đo đều tính bằng xen ti mét.
+
+18
+00:00:57,073 --> 00:01:00,870
+Chương trình dùng Python để chia phân tầng dữ liệu thành một
+
+19
+00:01:00,976 --> 00:01:04,964
+trăm linh hai mẫu huấn luyện và bốn mươi lăm mẫu kiểm tra.
+
+20
+00:01:05,069 --> 00:01:08,123
+Hạt giống được giữ cố định là bốn mươi hai.
+
+21
+00:01:08,228 --> 00:01:11,173
+Kiểm định chéo năm phần chỉ dùng tập huấn luyện.
+
+22
+00:01:11,278 --> 00:01:16,310
+Bước chuẩn hóa của k láng giềng và SVM nằm trong chuỗi xử lý,
+
+23
+00:01:16,415 --> 00:01:18,252
+chỉ học từ phần huấn luyện.
+
+24
+00:01:18,358 --> 00:01:20,427
+Tập kiểm tra được giữ riêng.
+
+25
+00:01:21,065 --> 00:01:25,355
+Trong kiểm định chéo, k láng giềng đạt F một macro trung bình
+
+26
+00:01:25,446 --> 00:01:27,418
+không phẩy chín sáu không hai.
+
+27
+00:01:27,509 --> 00:01:30,365
+SVM đạt không phẩy chín năm chín bảy.
+
+28
+00:01:30,456 --> 00:01:34,180
+Cây quyết định và rừng ngẫu nhiên đều xấp xỉ không phẩy chín
+
+29
+00:01:34,271 --> 00:01:34,811
+năm.
+
+30
+00:01:34,902 --> 00:01:38,528
+Khoảng cách giữa k láng giềng và SVM rất nhỏ.
+
+31
+00:01:38,619 --> 00:01:42,670
+Vì vậy, chưa thể kết luận một mô hình luôn tốt hơn từ lần chạy
+
+32
+00:01:42,761 --> 00:01:43,435
+này.
+
+33
+00:01:44,065 --> 00:01:48,128
+Trên bốn mươi lăm mẫu kiểm tra, cây quyết định dự đoán đúng bốn
+
+34
+00:01:48,218 --> 00:01:49,148
+mươi hai mẫu.
+
+35
+00:01:49,238 --> 00:01:51,734
+Ba mô hình còn lại đúng bốn mươi mốt mẫu.
+
+36
+00:01:51,824 --> 00:01:54,769
+SVM nhận diện đúng toàn bộ setosa.
+
+37
+00:01:54,860 --> 00:01:59,485
+Các sai sót nằm ở versicolor và virginica, là hai loài có vùng
+
+38
+00:01:59,576 --> 00:02:00,741
+số đo giao nhau.
+
+39
+00:02:00,832 --> 00:02:04,911
+Với tập kiểm tra nhỏ này, chỉ một mẫu đã tương ứng khoảng hai
+
+40
+00:02:05,001 --> 00:02:07,435
+phẩy hai hai điểm phần trăm độ chính xác.
+
+41
+00:02:08,067 --> 00:02:12,593
+Dashboard cho phép chọn loài, thay đổi hai trục, xem biểu đồ và
+
+42
+00:02:12,686 --> 00:02:15,494
+tải báo cáo PDF hoặc CSV.
+
+43
+00:02:15,588 --> 00:02:19,755
+Ví dụ, chỉ chọn setosa thì báo cáo có bốn mươi tám mẫu.
+
+44
+00:02:19,848 --> 00:02:23,499
+Các chỉ số mô hình vẫn được ghi riêng cho dữ liệu đầy đủ.
+
+45
+00:02:23,592 --> 00:02:27,584
+Kết quả cho thấy thứ hạng kiểm định chéo và tập kiểm tra có thể
+
+46
+00:02:27,678 --> 00:02:28,502
+khác nhau.
+
+47
+00:02:28,595 --> 00:02:32,120
+Đây mới là kết quả của một lần chia trên dữ liệu nhỏ.
+
+48
+00:02:32,214 --> 00:02:36,023
+Hướng tiếp theo là thử nhiều lần chia và thêm dữ liệu để đánh
+
+49
+00:02:36,116 --> 00:02:37,425
+giá ổn định hơn.
+
+50
+00:02:38,073 --> 00:02:42,901
+Mã nguồn, dữ liệu và kết quả được lưu kèm bài nộp để chạy lại.
+
+51
+00:02:43,008 --> 00:02:46,294
+Video dùng giọng đọc tự động và phụ đề tiếng Việt.
+
+52
+00:02:46,401 --> 00:02:49,436
+Nhóm cảm ơn thầy và các bạn đã theo dõi.
